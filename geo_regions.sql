@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1:3306
--- Время создания: Ноя 29 2017 г., 12:55
+-- Время создания: Ноя 29 2017 г., 13:05
 -- Версия сервера: 5.5.57-MariaDB
 -- Версия PHP: 5.6.31
 
@@ -30,10 +30,10 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `geo_regions` (
   `id` int(11) NOT NULL,
-  `country_iso` varchar(2) NOT NULL,
-  `region_id` varchar(22) NOT NULL,
-  `region_en` varchar(144) NOT NULL,
-  `region_ru` varchar(144) NOT NULL,
+  `country_iso` varchar(2) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `region_id` varchar(22) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `region_en` varchar(144) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `region_ru` varchar(144) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `region_uk` varchar(144) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `app_events` int(11) NOT NULL,
   `app_ads` int(11) NOT NULL
