@@ -11,7 +11,7 @@ SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
-CREATE TABLE `geo_cities` (
+CREATE TABLE `jugeo_cities` (
   `id` int(11) NOT NULL,
   `country` char(2) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `region` varchar(22) COLLATE utf8mb4_unicode_ci NOT NULL,
@@ -22,7 +22,7 @@ CREATE TABLE `geo_cities` (
   `city_uk` varchar(49) COLLATE utf8mb4_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
-CREATE TABLE `geo_countries` (
+CREATE TABLE `jugeo_countries` (
   `id` int(11) NOT NULL,
   `order` int(11) NOT NULL,
   `code` varchar(2) COLLATE utf8mb4_unicode_ci NOT NULL,
@@ -31,7 +31,7 @@ CREATE TABLE `geo_countries` (
   `name_uk` varchar(144) COLLATE utf8mb4_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
-CREATE TABLE `geo_regions` (
+CREATE TABLE `jugeo_regions` (
   `id` int(11) NOT NULL,
   `country` varchar(2) COLLATE utf8mb4_unicode_ci NOT NULL,
   `region` varchar(22) COLLATE utf8mb4_unicode_ci NOT NULL,
@@ -41,7 +41,7 @@ CREATE TABLE `geo_regions` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 
-ALTER TABLE `geo_cities`
+ALTER TABLE `jugeo_cities`
   ADD PRIMARY KEY (`id`),
   ADD KEY `idx` (`id`) USING BTREE,
   ADD KEY `country` (`country`),
@@ -52,7 +52,7 @@ ALTER TABLE `geo_cities`
   ADD KEY `city_ru` (`city_ru`),
   ADD KEY `city_uk` (`city_uk`);
 
-ALTER TABLE `geo_countries`
+ALTER TABLE `jugeo_countries`
   ADD PRIMARY KEY (`id`),
   ADD KEY `idx` (`id`) USING BTREE,
   ADD KEY `order` (`order`),
@@ -61,7 +61,7 @@ ALTER TABLE `geo_countries`
   ADD KEY `name_ru` (`name_ru`),
   ADD KEY `name_uk` (`name_uk`);
 
-ALTER TABLE `geo_regions`
+ALTER TABLE `jugeo_regions`
   ADD PRIMARY KEY (`id`),
   ADD KEY `idx` (`id`) USING BTREE,
   ADD KEY `country` (`country`),
@@ -71,10 +71,10 @@ ALTER TABLE `geo_regions`
   ADD KEY `region_uk` (`region_uk`);
 
 
-ALTER TABLE `geo_cities`
+ALTER TABLE `jugeo_cities`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=54915;
-ALTER TABLE `geo_countries`
+ALTER TABLE `jugeo_countries`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=247;
-ALTER TABLE `geo_regions`
+ALTER TABLE `jugeo_regions`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4109;COMMIT;
 ```
