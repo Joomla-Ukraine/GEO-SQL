@@ -18,6 +18,7 @@ CREATE TABLE `jugeo_regions` (
   `region_uk` varchar(144) COLLATE utf8mb4_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
+TRUNCATE TABLE `jugeo_regions`;
 INSERT INTO `jugeo_regions` (`id`, `country`, `region`, `region_en`, `region_ru`, `region_uk`) VALUES
 (1, 'AD', 'AD-02', 'Canillo', 'Canillo', 'Canillo'),
 (2, 'AD', 'AD-03', 'Encamp', 'Encamp', 'Encamp'),
