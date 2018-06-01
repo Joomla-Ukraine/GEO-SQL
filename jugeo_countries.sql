@@ -9,7 +9,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 
-CREATE TABLE `jugeo_countries` (
+CREATE TABLE IF NOT EXISTS `jugeo_countries` (
   `id` int(11) NOT NULL,
   `order` int(11) NOT NULL,
   `code` varchar(2) COLLATE utf8mb4_unicode_ci NOT NULL,
